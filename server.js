@@ -22,7 +22,6 @@ app.get( '/', function( req, res ){
 
 //Add a new To Do
 app.post( '/newToDo', function(req, res){
-  console.log( 'createTask route hit:', req.body) ;
 
   pool.connect(function( err, client, done ){
     if( err ){
@@ -41,7 +40,6 @@ app.post( '/newToDo', function(req, res){
 
 //Get To Dos from Server
 app.get( '/getToDo', function(req, res){
-  console.log( 'in getTasks' );
 
   var list = [];
 
